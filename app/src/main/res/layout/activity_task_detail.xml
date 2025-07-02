@@ -1,0 +1,203 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/root_themtask"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:fitsSystemWindows="true"
+    tools:context=".activities.TaskDetailActivity">
+
+    <!-- Main Content -->
+    <androidx.constraintlayout.widget.ConstraintLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:background="@color/background_color">
+
+        <ImageView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:src="@drawable/imgbackground"
+            android:scaleType="centerCrop"
+            android:alpha="0.5" />
+
+
+        <!-- CardView chứa form chỉnh sửa -->
+        <androidx.cardview.widget.CardView
+            android:id="@+id/card_input_form"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginHorizontal="16dp"
+            android:layout_marginTop="30dp"
+            app:cardCornerRadius="8dp"
+            app:cardElevation="4dp"
+            app:layout_constraintTop_toTopOf="parent"
+            app:layout_constraintStart_toStartOf="parent"
+            app:layout_constraintEnd_toEndOf="parent">
+
+            <androidx.constraintlayout.widget.ConstraintLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:background="@drawable/textview_border"
+                android:padding="@dimen/padding_card">
+
+                <!-- Tiêu đề: Title -->
+                <TextView
+                    android:id="@+id/tv_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Tiêu đề"
+                    android:textColor="#2196F3"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toTopOf="parent" />
+
+                <!-- Ô nhập: Title -->
+                <EditText
+                    android:id="@+id/edt_title"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:textColor="#2196F3"
+                    android:textSize="22sp"
+                    android:textStyle="bold"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_title" />
+
+                <!-- Tiêu đề: Description -->
+                <TextView
+                    android:id="@+id/tv_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Mô tả"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_title" />
+
+                <!-- Ô nhập: Description -->
+                <EditText
+                    android:id="@+id/edt_description"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_description" />
+
+                <!-- Dấu phân cách -->
+                <View
+                    android:id="@+id/divider1"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_description" />
+
+                <!-- Tiêu đề: Created Date -->
+                <TextView
+                    android:id="@+id/tv_created_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Ngày tạo"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider1" />
+
+                <!-- Ô nhập: Created Date -->
+                <EditText
+                    android:id="@+id/edt_created_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_created_date" />
+
+                <!-- Tiêu đề: Due Date -->
+                <TextView
+                    android:id="@+id/tv_due_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Hạn chót"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_created_date" />
+
+                <!-- Ô nhập: Due Date -->
+                <EditText
+                    android:id="@+id/edt_due_date"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_small"
+                    android:textColor="@color/textColorSecondary"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_due_date" />
+
+                <!-- Dấu phân cách -->
+                <View
+                    android:id="@+id/divider2"
+                    android:layout_width="0dp"
+                    android:layout_height="1dp"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:background="@color/dividerColor"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/edt_due_date" />
+
+                <!-- Tiêu đề: Status -->
+                <TextView
+                    android:id="@+id/tv_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="Trạng thái"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/divider2" />
+
+                <!-- Ô nhập: Status -->
+                <EditText
+                    android:id="@+id/edt_status"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="@dimen/margin_medium"
+                    android:textColor="#4CAF50"
+                    android:textSize="@dimen/text_size_content"
+                    app:layout_constraintEnd_toEndOf="parent"
+                    app:layout_constraintStart_toStartOf="parent"
+                    app:layout_constraintTop_toBottomOf="@id/tv_status" />
+
+
+
+                <!-- Nút Lưu -->
+                <Button
+                    android:id="@+id/btnSave"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="8dp"
+                    android:text="Lưu"
+                    app:layout_constraintTop_toBottomOf="@id/edt_status" />
+
+            </androidx.constraintlayout.widget.ConstraintLayout>
+        </androidx.cardview.widget.CardView>
+    </androidx.constraintlayout.widget.ConstraintLayout>
+
+
+</androidx.constraintlayout.widget.ConstraintLayout>

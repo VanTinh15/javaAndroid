@@ -1,0 +1,36 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:padding="12dp"
+    android:background="@color/background_color"
+    android:layout_marginBottom="8dp">
+
+
+    <TextView
+        android:id="@+id/tvTieuDe"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề công việc"
+        android:textColor="@color/text_color_primary"
+        android:textSize="16sp"
+        android:textStyle="bold" />
+
+    <TextView
+        android:id="@+id/tvNgayHan"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="Hạn: 2025-05-12"
+        android:textColor="@color/text_color_secondary"
+        android:textSize="14sp" />
+
+    <TextView
+        android:id="@+id/tvHetHan"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Đã hết hạn"
+        android:textColor="@android:color/holo_red_dark"
+        android:textSize="14sp"
+        android:visibility="gone" />
+</LinearLayout>

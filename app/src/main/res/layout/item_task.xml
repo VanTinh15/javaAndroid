@@ -1,0 +1,63 @@
+<?xml version="1.0" encoding="utf-8"?>
+<androidx.constraintlayout.widget.ConstraintLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:padding="12dp"
+    android:background="@android:color/white"
+    android:elevation="2dp"
+    android:layout_marginBottom="8dp">
+
+    <!-- Tiêu đề công việc -->
+    <TextView
+        android:id="@+id/txtTaskTitle"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Tiêu đề công việc"
+        android:textSize="18sp"
+        android:textStyle="bold"
+        android:textColor="@android:color/black"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toTopOf="parent"
+        app:layout_constraintEnd_toEndOf="parent" />
+
+    <!-- Mô tả công việc -->
+    <TextView
+        android:id="@+id/txtTaskDescription"
+        android:layout_width="0dp"
+        android:layout_height="wrap_content"
+        android:text="Mô tả công việc"
+        android:textSize="14sp"
+        android:textColor="@android:color/darker_gray"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTaskTitle"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintBottom_toTopOf="@id/txtTaskDueDate"
+        android:maxLines="2"
+        android:ellipsize="end" />
+
+    <!-- Trạng thái công việc -->
+    <TextView
+        android:id="@+id/txtTaskStatus"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Trạng thái"
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_blue_dark"
+        android:textStyle="italic"
+        app:layout_constraintEnd_toEndOf="parent"
+        app:layout_constraintTop_toTopOf="@id/txtTaskTitle" />
+
+    <!-- Hạn chót -->
+    <TextView
+        android:id="@+id/txtTaskDueDate"
+        android:layout_width="wrap_content"
+        android:layout_height="wrap_content"
+        android:text="Hạn: "
+        android:textSize="14sp"
+        android:textColor="@android:color/holo_red_dark"
+        app:layout_constraintStart_toStartOf="parent"
+        app:layout_constraintBottom_toBottomOf="parent"
+        app:layout_constraintTop_toBottomOf="@id/txtTaskDescription" />
+
+</androidx.constraintlayout.widget.ConstraintLayout>

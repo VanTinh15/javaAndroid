@@ -1,0 +1,17 @@
+<resources>
+    <string name="app_name">QuanLyGC</string>
+    <string name="no_tasks">Không có công việc nào</string>
+    <string name="add_task">Thêm công việc</string>
+
+    <string name="task_title">Tiêu đề</string>
+    <string name="task_description">Mô tả công việc</string>
+    <string name="created_date">Ngày tạo</string>
+    <string name="due_date">Hạn chót</string>
+    <string name="status">Trạng thái</string>
+    <!-- TODO: Remove or change this placeholder text -->
+
+    <string name="mo_menu_string">Mở menu</string>
+    <string name="dong_menu_string">Đóng menu</string>
+
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>
